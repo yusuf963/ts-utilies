@@ -1,6 +1,6 @@
-import {sum} from '../src/index'
 import {expect} from 'chai'
 import assert from 'assert'
+import {sum} from '../src/index'
 
 describe('sum', () => {
     it('should return the sum of two numbers', () => {
@@ -25,8 +25,12 @@ describe('sum', () => {
     });
 
     it("Should throw an error if input is not a number", () => {
-        // assert.throws(() => sum("1", 2), TypeError, "Input must be a number");
-        // expect(() => sum(1, true)).to.throw(TypeError, "Input must be a number");
+        //@ts-ignore
+        assert.throws(() => sum("1", 2), TypeError, "Input must be a number");
+        //@ts-ignore
+        expect(() => sum(1, true)).to.throw(TypeError, "Input must be a number");
+        //@ts-ignore
+        expect(() => sum(1, "2")).to.throw();
     });
     
 })
