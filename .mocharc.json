@@ -1,0 +1,20 @@
+{
+    "diff": true,
+    "slow": "75",
+    "timeout": "2000",
+    "extension": ["ts", "cjs", "mjs"],
+    "watch-files": ["_test_/*.spec.ts"],
+    "watch-ignore": ["lib/vendor"],
+    "spec": "src/**.ts",
+    "node-option": ["experimental-specifier-resolution=node", "loader=ts-node/esm"],
+    "ignore": [
+        "node_modules",
+        "dist",
+        "swaggers",
+        "migrations",
+        ".vscode",
+        ".changeset",
+        ".github"
+    ],
+    "testEnvironment": "node"
+}
