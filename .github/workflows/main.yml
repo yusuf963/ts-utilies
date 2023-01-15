@@ -1,17 +1,18 @@
+---
 name: CI
 on:
   push:
     branches:
       - "**"
     except:
-      - master 
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup pnpm  
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
@@ -19,8 +20,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "pnpm"
+          cache: pnpm
       - name: Install Dependencies
-         run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Lint and Build
-         run: pnpm run lint && pnpm run build
+        run: pnpm run lint && pnpm run build
