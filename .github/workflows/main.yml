@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup pnpm
+      - name: Setup pnpm v7
         uses: pnpm/action-setup@v2
         with:
           version: 7
@@ -21,7 +21,9 @@ jobs:
         with:
           node-version: 16.x
           cache: pnpm
-      - name: Install Dependencies
+      - name: Install Dependencies 📦
         run: pnpm install --frozen-lockfile
-      - name: Lint and Build
-        run: pnpm run lint && pnpm run build
+      - name: Run Lint, and Test 🧪
+        run: pnpm run lint && pnpm run test && pnpm build
+      - name: Run Build 🏗
+        run: pnpm run build 
