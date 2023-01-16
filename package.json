@@ -1,16 +1,24 @@
 {
   "name": "ts-utils",
   "license": "MIT",
+  "type": "module",
   "version": "0.0.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "mocha --exit --timeout 10000 --require ts-node/register '_test_/*.spec.ts'"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
     "tsup": "^6.5.0",
     "typescript": "^4.9.4"
   }
