@@ -22,6 +22,10 @@ describe('sum', () => {
         expect(sum(-1, -2)).equal(-3);
         expect(sum(-10, -20)).equal(-30);
         expect(sum(-5, 5)).equal(0);
+        expect(null).to.be.null
+        expect(null).to.be.a('null')
+
+
     });
 
     it("Should throw an error if input is not a number", () => {
@@ -31,6 +35,18 @@ describe('sum', () => {
         // expect(() => sum(1, true)).to.throw(TypeError, "Input must be a number");
         // @ts-ignore
         expect(() => sum(1, "2")).to.not.throw();
+        assert(true,'return sum is truthy')
+        assert.equal(NaN,NaN,'return is truthy')
+        assert.deepStrictEqual(NaN,NaN,'return is truthy')
+        assert.doesNotThrow(() => sum(1, 2), TypeError, "Input must be a number");
+        // assert.fail('fail')
+        assert.ifError(undefined)
+        assert.notDeepStrictEqual(1,'1','return is truthy')
+        assert.notEqual(1,'2','return is truthy')
+        assert.notStrictEqual(1,'1','return is truthy')
+        assert.ok(true,'return is truthy')
+        assert.strictEqual(1,1,'return is truthy')
+        // assert.throws(() => sum(1, 2), TypeError, "Input must be a number");
     });
     
-})
+})  
