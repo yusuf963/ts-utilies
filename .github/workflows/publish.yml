@@ -34,6 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       - name: Login to npm registry and publish packages
         run: npm login --registry=https://registry.npmjs.org/ --scope=@orgname --always-auth=true
+      - name: Pubblish to NPM Registery 
         run: npm publish  
-          env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
