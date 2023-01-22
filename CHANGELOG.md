@@ -1,5 +1,11 @@
 # utilityts
 
+## 0.0.4
+
+### Patch Changes
+
+- 1beee5c: add description to the job step
+
 ## 0.0.3
 
 ### Patch Changes
