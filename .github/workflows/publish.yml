@@ -32,10 +32,9 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-      - name: Login to npm registry and publish packages
-        run: npm login --registry=https://registry.npmjs.org/ --scope=@orgname --always-auth=true
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Pubblish to NPM Registery 
-        run: npm publish  
+      - name: Login to npm registry
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Publish to NPM Registery 
+        run: npm publish
+
 
