@@ -35,7 +35,7 @@ jobs:
       - name: Login to npm registry 🔐
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Publish to NPM Registery 📨
-        if: steps.changesets.outputs.changeset_ids != ""
+        if: steps.changesets.outputs.summary != "No changes were made"
         run: pnpm publish
 
 
