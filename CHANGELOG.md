@@ -1,4 +1,4 @@
-# ts-utils
+# utilityts
 
 ## 0.0.2
 
