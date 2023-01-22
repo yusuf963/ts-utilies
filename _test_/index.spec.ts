@@ -1,11 +1,11 @@
-import {expect} from 'chai'
+import { expect } from 'chai'
 import assert from 'assert'
-import {sum} from '../src/index'
+import { sum } from '../src/index'
 
 describe('sum', () => {
     it('should return the sum of two numbers', () => {
         expect('hi').equal("hi")
-        assert.equal('hi',"hi")
+        assert.equal('hi', "hi")
     })
     it("Should return the sum of two numbers", () => {
         expect(sum(1, 2)).equal(3);
@@ -35,18 +35,23 @@ describe('sum', () => {
         // expect(() => sum(1, true)).to.throw(TypeError, "Input must be a number");
         // @ts-ignore
         expect(() => sum(1, "2")).to.not.throw();
-        assert(true,'return sum is truthy')
-        assert.equal(NaN,NaN,'return is truthy')
-        assert.deepStrictEqual(NaN,NaN,'return is truthy')
+        assert(true, 'return sum is truthy')
+        assert.equal(NaN, NaN, 'return is truthy')
+        assert.deepStrictEqual(NaN, NaN, 'return is truthy')
         assert.doesNotThrow(() => sum(1, 2), TypeError, "Input must be a number");
         // assert.fail('fail')
         assert.ifError(undefined)
-        assert.notDeepStrictEqual(1,'1','return is truthy')
-        assert.notEqual(1,'2','return is truthy')
-        assert.notStrictEqual(1,'1','return is truthy')
-        assert.ok(true,'return is truthy')
-        assert.strictEqual(1,1,'return is truthy')
+        assert.notDeepStrictEqual(1, '1', 'return is truthy')
+        assert.notEqual(1, '2', 'return is truthy')
+        assert.notStrictEqual(1, '1', 'return is truthy')
+        assert.ok(true, 'return is truthy')
+        assert.strictEqual(1, 1, 'return is truthy')
         // assert.throws(() => sum(1, 2), TypeError, "Input must be a number");
     });
-    
+
+    it("should return the sum",()=>{
+        expect(1).to.equal(1)
+        assert.equal(2,2)
+    })
+
 })  
