@@ -1,5 +1,11 @@
 # utilityts
 
+## 0.0.5
+
+### Patch Changes
+
+- 8d58d8e: fix job steps
+
 ## 0.0.4
 
 ### Patch Changes
