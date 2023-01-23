@@ -30,12 +30,9 @@ jobs:
       - name: Create Release Pull Request 🔌
         id: changesets
         uses: changesets/action@v1
+        with: 
+          publish: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc && pnpm publish
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-      - name: Login to npm registry 🔐
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-      - name: Publish to NPM Registery 📨
-        needs: changesets
-        run: pnpm publish
 
 
