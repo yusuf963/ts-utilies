@@ -49,9 +49,13 @@ describe('sum', () => {
         // assert.throws(() => sum(1, 2), TypeError, "Input must be a number");
     });
 
-    it("should return the sum",()=>{
+    it("should return the sum", () => {
         expect(1).to.equal(1)
-        assert.equal(2,2)
+        assert.equal(2, 2)
+    })
+
+    it("should be ok", () => {
+        assert.ok(true)
     })
 
 })  
