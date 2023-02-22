@@ -32,7 +32,7 @@ jobs:
         uses: changesets/action@v1
         with: 
           publish: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          run: pnpm publish
+          publish: pnpm publish
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
 
