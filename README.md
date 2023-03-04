@@ -2,7 +2,8 @@
 pnpm tsc --init
 pnpm changeset init
 
-
+youtube video
+https://www.youtube.com/watch?v=eh89VE3Mk5g
 
 
 for publish.yml
