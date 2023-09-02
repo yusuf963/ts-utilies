@@ -1,5 +1,13 @@
 # utilityts
 
+## 0.1.0
+
+### Minor Changes
+
+- 7f4161b: Build new sum function
+- 1f8c753: integrate cypress
+- ccddb61: few
+
 ## 0.0.5
 
 ### Patch Changes
