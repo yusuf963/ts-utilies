@@ -46,3 +46,5 @@
 These are just a few examples of the methods that Chai provides. You can find more details about the functionality of each method in the Chai documentation.
 
 Keep in mind that chai and chai-http is different, chai-http is a plugin for chai that allow you to test http endpoints and it has different method set.
+
+test
