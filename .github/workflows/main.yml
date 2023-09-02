@@ -22,7 +22,7 @@ jobs:
           node-version: 16.x
           cache: pnpm
       - name: Install Dependencies 📦
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
       - name: Run Lint, and Test 🧪
         run: pnpm run lint && pnpm run test
       - name: Run Build 🏗
