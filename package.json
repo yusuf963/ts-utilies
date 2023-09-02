@@ -9,6 +9,7 @@
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "lint": "tsc",
+    "ci:publish": "pnpm publish -r",
     "test": "mocha --exit --timeout 10000 --require ts-node/register '_test_/*.spec.ts'"
   },
   "devDependencies": {
